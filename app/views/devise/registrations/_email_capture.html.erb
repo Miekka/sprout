@@ -13,12 +13,4 @@
   </div>
 </div>
 
-<script type='text/javascript'>
-  $(document).ready(function() {
-    $('.user_group').live('click', function() {
-      $.ajax({url: '/groups/' + $(this).attr('id'), dataType: 'script' });
-      $('.user_group').removeClass('active');
-      $(this).addClass('active');
-    })
-  })
-</script>
+<%= render partial: 'shared/group_javascripts' -%>
