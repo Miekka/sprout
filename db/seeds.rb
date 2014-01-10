@@ -11,6 +11,7 @@ Role.create([
   { :name => 'user' }, 
   { :name => 'VIP' }
 ], :without_protection => true)
+puts
 
 puts 'SETTING UP DEFAULT USER LOGIN'
 user = User.create! :name => 'First User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
@@ -21,4 +22,10 @@ user2.confirm!
 puts 'New user created: ' << user2.name
 user.add_role :admin
 user2.add_role :VIP
+puts
 
+puts 'Creating groups...'
+['clothier', 'textile engineer', 'weavers and knitters'].each { |ug| Group.create name: ug }
+puts
+
+puts 'Done.'

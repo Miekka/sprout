@@ -1,0 +1,16 @@
+<%= simple_form_for user, :as => 'user', :url => registration_path('user') , :html => {:class => 'form-inline form-horizontal' }, remote: true do |f| %>
+  <%= f.input :group_id, as: :hidden, input_html: { value: group.id } -%>
+  <%= f.input :full_name, required: true -%>
+  <%= f.input :email, required: true -%>
+  <%= f.input :weaver, as: :boolean, required: true -%>
+  <%= f.input :school, required: false -%>
+  <%= f.input :school_major, required: false -%>
+  <%= f.input :website, required: true -%>
+
+  <div class='control-group string optional'>
+    <label class='string required control-label'></label>
+    <div class='controls'>
+      <%= f.submit 'Notify Me', class: 'btn btn-primary' -%>
+    </div>
+  </div>
+<%- end -%>

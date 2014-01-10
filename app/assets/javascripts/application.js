@@ -17,13 +17,15 @@
 //= require dataTables/jquery.dataTables.bootstrap
 //= require_tree .
 $('document').ready(function() {
-  
+  // Dont need anymore as we use remote form in View code instead -Giang
   // use AJAX to submit the "request invitation" form
+
+  /*
   $('#invitation_button').live('click', function() {
     var email = $('form #user_email').val();
     var password = $('form #user_password').val();
     var dataString = 'user[email]='+ email + '&user[password]=' + password;
-    
+
     $.ajax({
       type: "POST",
       url: "/users",
@@ -31,12 +33,12 @@ $('document').ready(function() {
       success: function(data) {
         $('#request-invite').html(data);
         //Turn social sharing on or off
-	loadSocial();
+  loadSocial();
       }
     });
     return false;
   });
-  
+  */
 })
 
 // load social sharing scripts if the page includes a Twitter "share" button

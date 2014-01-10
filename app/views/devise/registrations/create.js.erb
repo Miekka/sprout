@@ -1,0 +1,8 @@
+<%- if resource.errors.any? -%>
+  <%- group_name = resource.group.name.downcase.parameterize.underscore -%>
+  $('#group_form').html('<%=j render partial: "groups/#{group_name}_form", locals: { user: resource, group: resource.group } -%>');
+<%- else -%>
+  NextSlide();
+<%- end -%>
+
+loadSocial();

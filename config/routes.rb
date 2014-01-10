@@ -1,4 +1,6 @@
 RailsPrelaunchSignup::Application.routes.draw do
+  resources :groups
+
   resources :admin do
   end
   

@@ -247,3 +247,22 @@ padding-bottom:45px;
 
 .navbar-fixed-bottom {position:fixed;}
 
+#welcome {
+  .simple_form {
+    text-align: center;
+
+    .controls {
+      text-align: left;
+      label input[type='checkbox'] {
+        margin-top: 7px;
+      }
+      .help-inline {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  #group_form {
+    text-align: center;
+  }
+}

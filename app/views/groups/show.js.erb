@@ -1,0 +1,2 @@
+<%- group_name = @group.name.downcase.parameterize.underscore -%>
+$('#group_form').html('<%=j render partial: "groups/#{group_name}_form", locals: { user: User.new, group: @group } -%>');

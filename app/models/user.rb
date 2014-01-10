@@ -7,8 +7,18 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :opt_in
-  
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :opt_in, :group_id,
+                  :discipline, :full_name, :graduated, :school, :school_major, :weaver, :website
+
+  belongs_to :group
+
+  validates_presence_of :full_name, :discipline, :school,
+                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'clothier' }
+  validates_presence_of :full_name, :discipline, :school, :school_major, :graduated,
+                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'textile engineer' }
+  validates_presence_of :full_name, :weaver, :website,
+                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'weavers and knitters' }
+
   after_create :add_user_to_mailchimp unless Rails.env.test? or Rails.env.development?
   before_destroy :remove_user_from_mailchimp unless Rails.env.test? or Rails.env.development?
 

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120826102940) do
+ActiveRecord::Schema.define(:version => 20140109171851) do
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -43,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20120826102940) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.boolean  "opt_in"
+    t.integer  "group_id"
+    t.string   "full_name"
+    t.string   "discipline"
+    t.string   "school"
+    t.string   "website"
+    t.string   "school_major"
+    t.boolean  "graduated"
+    t.boolean  "weaver"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
