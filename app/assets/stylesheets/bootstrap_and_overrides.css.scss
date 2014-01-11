@@ -13,8 +13,9 @@ border:0px; }
 body {
 	padding-bottom:60px;
 }
-@import "bootstrap";
-@import "bootstrap-responsive";
+// already imported line #4 -Giang
+//@import "bootstrap";
+@import "bootstrap/bootstrap-responsive";
 @font-face {
     font-family: 'macarthur_yachtingregular';
     src: font-url('macarthur_yachtin-webfont.eot');
