@@ -2,7 +2,7 @@
   <%= f.input :group_id, as: :hidden, input_html: { value: group.id } -%>
   <%= f.input :full_name, required: true -%>
   <%= f.input :email, required: true -%>
-  <%= f.input :weaver, as: :boolean, required: true -%>
+  <%= f.input :weaver_or_knitter, collection: User::WEAVER_KNITTER, as: :radio_buttons, required: true -%>
   <%= f.input :school, required: false -%>
   <%= f.input :school_major, required: false -%>
   <%= f.input :website, required: true -%>

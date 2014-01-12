@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  WEAVER_KNITTER = %w(weaver knitter)
+
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -8,16 +10,20 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :opt_in, :group_id,
-                  :discipline, :full_name, :graduated, :school, :school_major, :weaver, :website
+                  :discipline, :full_name, :graduated, :school, :school_major, :weaver_or_knitter, :website
 
   belongs_to :group
 
-  validates_presence_of :full_name, :discipline, :school,
-                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'clothier' }
-  validates_presence_of :full_name, :discipline, :school, :school_major, :graduated,
-                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'textile engineer' }
-  validates_presence_of :full_name, :weaver, :website,
-                        if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'weavers and knitters' }
+  validates_presence_of  :full_name, :discipline, :school,
+                         if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'clothier' }
+  validates_presence_of  :full_name, :discipline, :school, :school_major,
+                         if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'textile engineer' }
+  validates_presence_of  :full_name, :weaver_or_knitter, :website,
+                         if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'weavers and knitters' }
+  validates_inclusion_of :graduated, in: [true, false], message: "can't be blank",
+                         if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'textile engineer' }
+  validates_inclusion_of :weaver_or_knitter, in: WEAVER_KNITTER,
+                         if: Proc.new { |u| u.group.present? && u.group.name.downcase == 'weavers and knitters' }
 
   after_create :add_user_to_mailchimp unless Rails.env.test? or Rails.env.development?
   before_destroy :remove_user_from_mailchimp unless Rails.env.test? or Rails.env.development?
