@@ -34,15 +34,15 @@
   })();
 
 </script>
-<!--<header class="header">
-</header>-->
+<header class="header">
+</header>
     <div id="main" role="main">
 	    <div class="container">
-            <div class="span12" style="margin-left:0;">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
+            <!--<div class="span12" style="margin-left:0;">
+		    <%= render 'layouts/messages' %>-->
+	      <%= yield %>
             
-          <footer class="navbar navbar-fixed-bottom">
+          <footer class="" style="background-image:none;background-color:transparent; border:0px; position:fixed; bottom:0px; margin-bottom:0px;" >
       <nav class="navbar-inner" style="background-image:none;
 background-color:transparent; border:0px;">
         <div class="container">

@@ -1,108 +1,105 @@
-    <script type="text/javascript">
-        var SlideWidth = 600;
-        var SlideSpeed = 250;
+<script type="text/javascript">
+  var SlideWidth = 600;
+  var SlideSpeed = 250;
 
-        $(document).ready(function () {
-            // set the prev and next buttons display
-            SetNavigationDisplay();
-        });
+  $(document).ready(function () {
+    // set the prev and next buttons display
+    SetNavigationDisplay();
+  });
 
-        function CurrentMargin() {
-            // get current margin of slider
-            var currentMargin = $("#slider-wrapper").css("margin-left");
+  function CurrentMargin() {
+    // get current margin of slider
+    var currentMargin = $("#slider-wrapper").css("margin-left");
 
-            // first page load, margin will be auto, we need to change this to 0
-            if (currentMargin == "auto") {
-                currentMargin = 0;
-            }
+    // first page load, margin will be auto, we need to change this to 0
+    if (currentMargin == "auto") {
+      currentMargin = 0;
+    }
 
-            // return the current margin to the function as an integer
-            return parseInt(currentMargin);
-        }
+    // return the current margin to the function as an integer
+    return parseInt(currentMargin);
+  }
 
-        function SetNavigationDisplay() {
-            // get current margin
-            var currentMargin = CurrentMargin();
+  function SetNavigationDisplay() {
+    // get current margin
+    var currentMargin = CurrentMargin();
 
-            // if current margin is at 0, then we are at the beginning, hide previous
-            if (currentMargin == 0) {
-                $("#PreviousButton").hide();
-            }
-            else {
-                $("#PreviousButton").hide();
-            }
+    // if current margin is at 0, then we are at the beginning, hide previous
+    if (currentMargin == 0) {
+      $("#PreviousButton").hide();
+    }
+    else {
+      $("#PreviousButton").hide();
+    }
 
-            // get wrapper width
-            var wrapperWidth = $("#slider-wrapper").width();
+    // get wrapper width
+    var wrapperWidth = $("#slider-wrapper").width();
 
-            // turn current margin into postive number and calculate if we are at last slide, if so, hide next button
-            if ((currentMargin * -1) == (wrapperWidth - SlideWidth)) {
-                $("#NextButton").hide();
-            }
-            else {
-                $("#NextButton").show();
-            }
-        }
+    // turn current margin into postive number and calculate if we are at last slide, if so, hide next button
+    if ((currentMargin * -1) == (wrapperWidth - SlideWidth)) {
+      $("#NextButton").hide();
+    }
+    else {
+      $("#NextButton").show();
+    }
+  }
 
-        function NextSlide() {
-            // get the current margin and subtract the slide width
-            var newMargin = CurrentMargin() - SlideWidth;
+  function NextSlide() {
+    // get the current margin and subtract the slide width
+    var newMargin = CurrentMargin() - SlideWidth;
 
-            // slide the wrapper to the left to show the next panel at the set speed. Then set the nav display on completion of animation.
-            $("#slider-wrapper").animate({ marginLeft: newMargin }, SlideSpeed, function () { SetNavigationDisplay() });
-        }
+    // slide the wrapper to the left to show the next panel at the set speed. Then set the nav display on completion of animation.
+    $("#slider-wrapper").animate({ marginLeft: newMargin }, SlideSpeed, function () { SetNavigationDisplay() });
+  }
 
-        function PreviousSlide() {
-            // get the current margin and subtract the slide width
-            var newMargin = CurrentMargin() + SlideWidth;
+  function PreviousSlide() {
+    // get the current margin and subtract the slide width
+    var newMargin = CurrentMargin() + SlideWidth;
 
-            // slide the wrapper to the right to show the previous panel at the set speed. Then set the nav display on completion of animation.
-            $("#slider-wrapper").animate({ marginLeft: newMargin }, SlideSpeed, function () { SetNavigationDisplay() });
-        } 
-    </script>
-
+    // slide the wrapper to the right to show the previous panel at the set speed. Then set the nav display on completion of animation.
+    $("#slider-wrapper").animate({ marginLeft: newMargin }, SlideSpeed, function () { SetNavigationDisplay() });
+  }
+</script>
 
 <div id="welcome">
-	<div class="hero-unit">
+  <div class="hero-unit">
+  <!--- DISPLAY CONTAINER -->
+  <div id="container">
+	  <div id="logo"></div>
+    <h1>THE VISION</h1>
 
-<!--- DISPLAY CONTAINER --->
-<div id="container">
-	<h1>THE VISION</h1>
-        <!-- OUTTER WRAPPER -->
-        <div id="slider-wrapper">
-            <!-- SLIDE 1 -->
-	    <div id="slide1" class="slide">    
-		    
-		    <p>...is to give the most talented emerging artisan clothiers, textile engineers, and indipendent weavers and knitters the opportunity to develop innovative startups by connecting, sharing, and collaborating together in a professional manner.</p>
-		    <h2><%= render 'dynamic_h2' %></h2>		<p style="font-size:10px;">We can only realize our vision if we can make an impact</p>
+    <!-- OUTTER WRAPPER -->
+    <div id="slider-wrapper">
+      <!-- SLIDE 1 -->
+      <div id="slide1" class="slide">
+        <p>
+          ...is to give the most talented emerging artisan clothiers, textile engineers, and independent weavers and knitters the opportunity to develop innovative products by connecting, sharing, and collaborating together as a community.
+        </p>
+        <h2><%= render 'dynamic_h2' %></h2>  
+        <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-default" id="NextButton" style="" type="submit" value="Sounds Cool">
+      </div>  <!-- /slide 1 -->
 
-		    		 <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-primary" id="NextButton" style="" type="submit" value="I want to help">    
-			 </div>  <!-- /slide 1 -->
+      <!-- SLIDE 2 -->
+      <div id="slide2" class="slide">
+	      <h3>Tell us about yourself</h3>
+	       <p style="font-size:10px;">We can only realize our vision if we can make an impact</p>
+        <div class="email_capture" style="margin-left:auto; margin-right:auto;">
+          <div id="request-invite" class="form-inline">
+            <%= render 'email_capture' %>
+          </div>
+        </div>
+        <!--  <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-primary" id="NextButton" style="" type="submit" value="When will I be able to get a pair?">   -->
+      </div>
 
-
-
-<!-- SLIDE 2 -->
-            <div id="slide2" class="slide">
-		    <h3>Tell us about yourself</h3> 
-		 <div class="email_capture" style="margin-left:auto; margin-right:auto;">	
-		<div id="request-invite" class="form-inline">
-				<%= render 'email_capture' %>
-			</div>
-		</div>   
-		 <!--  <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-primary" id="NextButton" style="" type="submit" value="When will I be able to get a pair?">   --> 	    
-	    </div>
-
-
-
-
-            <!-- SLIDE 3 -->
-	   <!-- <div id="slide3" class="slide">        
-	    </div>-->
-</div>
+      <!-- SLIDE 3 -->
+      <div id="slide3" class="slide">
+        <h3>Thank you.</h3>
+      </div>
     </div>
-<!--- NAVIGATION BUTTONS
-<input href="javascript:void(0)" onclick="PreviousSlide()" class="btn btn-primary" id="PreviousButton" style="font-family: 'macarthur_yachtingregular'; margin-right: 10px;" type="submit" value="Previous">
-       --> 
-		
-</div> <!-- /hero-unit -->
+  </div>
+
+  <!--- NAVIGATION BUTTONS
+  <input href="javascript:void(0)" onclick="PreviousSlide()" class="btn btn-primary" id="PreviousButton" style="font-family: 'macarthur_yachtingregular'; margin-right: 10px;" type="submit" value="Previous">
+         -->
+  </div> <!-- /hero-unit -->
 </div> <!-- /welcome -->

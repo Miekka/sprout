@@ -9,7 +9,7 @@
   <div class='control-group string optional'>
     <label class='string required control-label'></label>
     <div class='controls'>
-      <%= f.submit 'Notify Me', class: 'btn btn-default' -%>
+      <%= f.submit 'Notify Me', class: 'btn btn-primary' -%>
     </div>
   </div>
 <% end %>

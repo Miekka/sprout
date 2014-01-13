@@ -4,12 +4,14 @@
   <%= f.input :email, required: true -%>
   <%= f.input :discipline, required: true -%>
   <%= f.input :school, required: true -%>
+  <%= f.input :school_major, required: true -%>
+  <%= f.input :graduated, as: :radio_buttons, required: true -%>
   <%= f.input :website, required: false -%>
 
   <div class='control-group string optional'>
     <label class='string required control-label'></label>
     <div class='controls'>
-      <%= f.submit 'Notify Me', class: 'btn btn-default' -%>
+      <%= f.submit 'Notify Me', class: 'btn btn-primary' -%>
     </div>
   </div>
-<% end %>
+<%- end -%>

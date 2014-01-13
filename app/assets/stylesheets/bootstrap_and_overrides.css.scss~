@@ -2,18 +2,23 @@
 $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
+
+html {background-color: #b8f1c6;}
 header { background-image:url('');
- background-color: #fff;
+ background-color: #b8f1c6;
      background-repeat:no-repeat;
 height:128px;
 width:1366px; 
-border:0px; }
+border:0px;
+margin-bottom:"-60px"; }
 
 
 body {
 	padding-bottom:60px;
+	background-color: #b8f1c6;
 }
-@import "bootstrap";
+// already imported line #4 -Giang
+//@import "bootstrap";
 @import "bootstrap-responsive";
 @font-face {
     font-family: 'macarthur_yachtingregular';
@@ -28,10 +33,10 @@ body {
 }
 
 #main {
-background-image:url('BG-bottom.jpg');
- background-color: #fff;
+background-image:url('');
+background-color: #b8f1c6;
      background-repeat:no-repeat;
-height:640px;
+height:100%;
 width:1366px; 
 border:0px;
 }
@@ -47,6 +52,15 @@ border:0px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.logo {
+ background-image: image-url("sprout-logo.png");
+height:171px;
+width:147px;
+margin-left: auto;
+margin-right: auto;
+
 }
 
 .content {
@@ -100,7 +114,8 @@ background-color:transparent; }
   }
 
    h2 {
-    margin-top: 0px;
+    margin-top: 30px;
+    font-size: 20px;
   }
   .serif{
  
@@ -247,3 +262,31 @@ padding-bottom:45px;
 
 .navbar-fixed-bottom {position:fixed;}
 
+#welcome {
+  .simple_form {
+    text-align: center;
+    margin-left: 8px;
+
+    .controls {
+      text-align: left;
+      label input[type='checkbox'] {
+        margin-top: 7px;
+      }
+      label.radio {
+        display: block;
+        margin-bottom: 5px;
+        input[type='radio'] {
+          margin-top: 4px;
+          margin-right: 5px;
+        }
+      }
+      .help-inline {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  #group_form {
+    text-align: center;
+  }
+}

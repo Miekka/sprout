@@ -65,6 +65,7 @@
   <div class="hero-unit">
   <!--- DISPLAY CONTAINER -->
   <div id="container">
+	  <div class="logo"></div>
     <h1>THE VISION</h1>
 
     <!-- OUTTER WRAPPER -->
@@ -72,16 +73,16 @@
       <!-- SLIDE 1 -->
       <div id="slide1" class="slide">
         <p>
-          ...is to give dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy
-          dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy.
+          ...is to give the most talented emerging artisan clothiers, textile engineers, and independent weavers and knitters the opportunity to develop innovative products by connecting, sharing, and collaborating together as a community.
         </p>
-        <h2><%= render 'dynamic_h2' %></h2>   <p style="font-size:10px;">We can only realize our vision if we can make an impact</p>
-        <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-primary" id="NextButton" style="" type="submit" value="I want to help">
+        <h2><%= render 'dynamic_h2' %></h2>  
+        <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-default" id="NextButton" style="" type="submit" value="Sounds Cool">
       </div>  <!-- /slide 1 -->
 
       <!-- SLIDE 2 -->
       <div id="slide2" class="slide">
-        <h3>Tell us about yourself</h3>
+	      <h3>Tell us about yourself</h3>
+	       <p style="font-size:10px;">We can only realize our vision if we can make an impact</p>
         <div class="email_capture" style="margin-left:auto; margin-right:auto;">
           <div id="request-invite" class="form-inline">
             <%= render 'email_capture' %>
