@@ -2,7 +2,7 @@
   <%= javascript_include_tag 'http://www.google.com/jsapi' %>
 <% end %>
 <h2>Users</h2>
-<%= link_to("Add new user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :create, :class => 'btn btn-mini') %>
+
 <div class="span9">
   <p>
     Send Bulk Invitations:
@@ -16,7 +16,13 @@
     <thead>
       <tr>
 	<th>Email</th>
+	<th>Discipline</th>
 	<th>Name</th>
+	<th>Weave or Knit</th>
+	<th>School</th>
+	<th>Major</th>
+	<th>Graduated</th>
+	<th>Website</th>
 	<th>Status</th>
 	<th></th>
         <th>Requested</th>
@@ -30,8 +36,14 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-	  <td><%= link_to user.email, user %></td>
-	  <td><%= user.name %></td>
+		<td><%= link_to user.email, user %></td>
+		 <td><%= user.discipline %></td>
+	  <td><%= user.full_name %></td>
+	  <td><%= user.weaver_or_knitter %></td>
+	  <td><%= user.school %></td>
+	  <td><%= user.school_major %></td>
+	  <td><%= user.graduated %></td>
+	  <td><%= user.website %></td>
            <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
         <td>
           <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>

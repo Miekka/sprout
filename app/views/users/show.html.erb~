@@ -5,6 +5,6 @@
 <p>Discipline: <%= @user.discipline if @user.discipline %></p>
 <p>Specialty: <%= @user.weaver_or_knitter if @user.weaver_or_knitter %></p>
 <p>School: <%= @user.school if @user.school %></p>
-<p>Major: <%= @user.school_major if @user.school_major %></p>
+<%= Major: @user.school_major if @user.school_major %>
 <p>Graduated: <%= @user.graduated if @user.graduated %></p>
 <p>Website: <%= @user.website if @user.website %></p>
