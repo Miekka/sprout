@@ -3,9 +3,9 @@ $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
 
-html {background-color: #b8f1c6;}
+html {background-color: #fff;}
 header { background-image:url('');
- background-color: #b8f1c6;
+ background-color: #fff;
      background-repeat:no-repeat;
 height:60px;
 width:1366px; 
@@ -14,7 +14,7 @@ border:0px; }
 
 body {
 	padding-bottom:60px;
-	background-color: #b8f1c6;
+	background-color: #fff;
 }
 // already imported line #4 -Giang
 //@import "bootstrap";
@@ -33,7 +33,7 @@ body {
 
 #main {
 background-image:url('');
-background-color: #b8f1c6;
+background-color: #fff;
      background-repeat:no-repeat;
 height:100%;
 width:1366px; 
@@ -109,12 +109,15 @@ background-color:transparent; }
 
   p {line-height:20px;}
   h1 {
-    margin-bottom: 40px;
+	  font-size:50px;
+    margin-top: 20px;
+    margin-bottom:0px;
   }
 
    h2 {
-    margin-top: 30px;
-    font-size: 20px;
+	   font-weight:normal;
+    margin-top: 0px;
+    font-size: 18px;
   }
   .serif{
  

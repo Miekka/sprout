@@ -66,23 +66,18 @@
   <!--- DISPLAY CONTAINER -->
   <div id="container">
 	  <div class="logo"></div>
-    <h1>THE VISION</h1>
-
+	  <h1>You're just a little seed</h1>
+	  <h2>Develop innovative products by connecting, sharing, and collaborating</h2> 
     <!-- OUTTER WRAPPER -->
     <div id="slider-wrapper">
       <!-- SLIDE 1 -->
       <div id="slide1" class="slide">
-        <p>
-          ...is to give the most talented emerging artisan clothiers, textile engineers, and independent weavers and knitters the opportunity to develop innovative products by connecting, sharing, and collaborating together as a community.
-        </p>
-        <h2><%= render 'dynamic_h2' %></h2>  
-        <input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-default" id="NextButton" style="" type="submit" value="Sounds Cool">
+	<input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-success btn-large" id="NextButton" style="margin-top: 50px;" type="submit" value="Sprout!">
       </div>  <!-- /slide 1 -->
 
       <!-- SLIDE 2 -->
       <div id="slide2" class="slide">
-	      <h3>Tell us about yourself</h3>
-	       <p style="font-size:10px;">We can only realize our vision if we can make an impact</p>
+	      <h3 style="margin-bottom: -10px;margin-top:-10px;">What's your angle?</h3>
         <div class="email_capture" style="margin-left:auto; margin-right:auto;">
           <div id="request-invite" class="form-inline">
             <%= render 'email_capture' %>
@@ -93,7 +88,7 @@
 
       <!-- SLIDE 3 -->
       <div id="slide3" class="slide">
-        <h3>Thank you.</h3>
+        <h4>Thank you.</h4>
       </div>
     </div>
   </div>
