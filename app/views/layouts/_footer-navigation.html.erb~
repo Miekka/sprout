@@ -22,7 +22,4 @@
   <% end %>
 </ul>
 <ul class="nav pull-right" style="margin-top:2px;">
-	<%= link_to image_tag("facebook.png"), "http://www.facebook.com/MiekkaSocial" %>
-	<%= link_to image_tag("twitter.png"), "https://twitter.com/MiekkaMacArthur" %>
-	<%= link_to image_tag("pinterest.png"), "http://pinterest.com/MiekkaMacArthur/" %>
 </ul>

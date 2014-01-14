@@ -1,5 +1,11 @@
-<div class="logo" style="float:left;"></div>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% provide :title, "Update Profile" %>
+
+<div class="logo" style="margin-top:-40px;"></div>
+
+<div class="row">
+  <div class="span6 offset3">
+<%= gravatar_for @user %>
+<a href="http://gravatar.com/emails" class="btn btn-success" style="margin-top:30px;">Change</a><br/><br/>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
   <%= f.input :full_name, :autofocus => true %>
@@ -12,4 +18,6 @@
   <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
   <%= f.button :submit, 'Update', :class => 'btn btn-success btn-large' %>
 <% end %>
+ </div>
+</div>
 
