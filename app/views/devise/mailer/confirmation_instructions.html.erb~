@@ -1,6 +1,6 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p>Welcome <%= @resource.name %>!</p>
 
-<p>We're pleased to invite you to try <%= link_to 'example.com', root_url %>.</p>
+<p>We're pleased to inform you that you are now part of the <%= link_to 'sprout-bespoke.com', root_url %> team.</p>
 
 <p>Please click the link below to confirm your email address and set your password:</p>
 
