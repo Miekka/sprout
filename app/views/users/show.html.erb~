@@ -1,19 +1,39 @@
 <% provide :title, @user.full_name %>
+	<%= gravatar_for @user %>
 <div class="row">
   <aside class="span4">
     <section>
-<h3>
-	<%= gravatar_for @user %>
+<h1>
+
 	<%= @user.full_name%>
+</h1>
+
 <!--<p>User: <%= @user.name %></p>-->
 <!--<p>Name: <%= @user.full_name if @user.full_name %></p>-->
-<p>Email: <%= @user.email if @user.email %></p>
-<p>Discipline: <%= @user.discipline if @user.discipline %></p>
-<p>Specialty: <%= @user.weaver_or_knitter if @user.weaver_or_knitter %></p>
-<p>School: <%= @user.school if @user.school %></p>
-<p>Major: <%= @user.school_major if @user.school_major %></p>
-<p>Graduated: <%= @user.graduated if @user.graduated %></p>
-<p>Website: <%= @user.website if @user.website %></p></h3>
+<!--<p>Email: <%= @user.email if @user.email %></p>-->
+<% if @user.discipline? %>
+	Discipline:<%= @user.discipline %>
+	<br/>
+<% end %>
+<% if @user.weaver_or_knitter? %>
+	Specialty:<%= @user.weaver_or_knitter %>
+	<br/>
+<% end %>
+<% if @user.school? %>
+	School:<%= @user.school %>
+	<br/>
+<% end %>
+<% if @user.school_major? %>
+	Major:<%= @user.school_major %>
+	<br/>
+<% end %>
+<% if @user.graduated? %>
+	Graduated:<%= @user.graduated %>
+	<br/>
+<% end %>
+<% if @user.website? %>
+	Website:<%= @user.website %>
+<% end %>
 </section>
   </aside>
 </div>
