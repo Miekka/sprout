@@ -1,10 +1,20 @@
-<h3>User</h3>
+<% provide :title, @user.full_name %>
+<div class="row">
+  <aside class="span4">
+    <section>
+<h3>
+	<%= gravatar_for @user %>
+	<%= @user.full_name%>
 <!--<p>User: <%= @user.name %></p>-->
-<p>Name: <%= @user.full_name if @user.full_name %></p>
+<!--<p>Name: <%= @user.full_name if @user.full_name %></p>-->
 <p>Email: <%= @user.email if @user.email %></p>
 <p>Discipline: <%= @user.discipline if @user.discipline %></p>
 <p>Specialty: <%= @user.weaver_or_knitter if @user.weaver_or_knitter %></p>
 <p>School: <%= @user.school if @user.school %></p>
-<%= Major: @user.school_major if @user.school_major %>
+<p>Major: <%= @user.school_major if @user.school_major %></p>
 <p>Graduated: <%= @user.graduated if @user.graduated %></p>
-<p>Website: <%= @user.website if @user.website %></p>
+<p>Website: <%= @user.website if @user.website %></p></h3>
+</section>
+  </aside>
+</div>
+

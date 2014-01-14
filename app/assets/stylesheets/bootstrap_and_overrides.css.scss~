@@ -3,6 +3,57 @@ $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
+
 html {background-color: #fff;}
 header { background-image:url('');
  background-color: #fff;
@@ -59,7 +110,6 @@ height:171px;
 width:147px;
 margin-left: auto;
 margin-right: auto;
-margin-top:20px;
 
 }
 
@@ -111,7 +161,7 @@ background-color:transparent; }
   p {line-height:20px;}
   h1 {
 	  font-size:50px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom:0px;
   }
 

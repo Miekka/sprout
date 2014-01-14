@@ -42,7 +42,7 @@
 		    <%= render 'layouts/messages' %>-->
 	      <%= yield %>
             
-          <footer class="" style="background-image:none;background-color:transparent; border:0px; position:fixed; bottom:0px; margin-bottom:0px;" >
+          <footer class="navbar" style="background-image:none;background-color:transparent; border:0px; position:fixed; bottom:0px; margin-bottom:0px;" >
       <nav class="navbar-inner" style="background-image:none;
 background-color:transparent; border:0px;">
         <div class="container">
