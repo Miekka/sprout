@@ -93,8 +93,8 @@
     </div>
   </div>
 
-   NAVIGATION BUTTONS
+  <!--- NAVIGATION BUTTONS
   <input href="javascript:void(0)" onclick="PreviousSlide()" class="btn btn-primary" id="PreviousButton" style="font-family: 'macarthur_yachtingregular'; margin-right: 10px;" type="submit" value="Previous">
-         
+         -->
   </div> <!-- /hero-unit -->
 </div> <!-- /welcome -->

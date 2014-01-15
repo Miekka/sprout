@@ -9,8 +9,8 @@
   <div class='control-group string optional'>
     <label class='string required control-label'></label>
     <div class='controls'>
-	     <p style="font-size:12px;">By joining together as a group we can make a big impact.<br /> The more we grow the more possibilities we have to do something amazing. </p>
-	     <%= f.submit 'Apply to Sprout', class: 'btn btn-default', style: 'width: 360px;' -%>
+	     <p style="font-size:12px;">By joining together as a group we can make a big impact.<br /> The more we grow together, the more possibilities we have to do something amazing. </p>
+	     <%= f.submit 'Apply to Sprout', class: 'btn btn-success btn-large', style: 'width: 360px;' -%>
 
     </div>
   </div>
