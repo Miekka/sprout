@@ -21,27 +21,6 @@
   }
 
   function SetNavigationDisplay() {
-    // get current margin
-    var currentMargin = CurrentMargin();
-
-    // if current margin is at 0, then we are at the beginning, hide previous
-    if (currentMargin == 0) {
-      $("#PreviousButton").hide();
-    }
-    else {
-      $("#PreviousButton").hide();
-    }
-
-    // get wrapper width
-    var wrapperWidth = $("#slider-wrapper").width();
-
-    // turn current margin into postive number and calculate if we are at last slide, if so, hide next button
-    if ((currentMargin * -1) == (wrapperWidth - SlideWidth)) {
-      $("#NextButton").hide();
-    }
-    else {
-      $("#NextButton").show();
-    }
   }
 
   function NextSlide() {
@@ -68,11 +47,13 @@
 	  <div class="logo"></div>
 	  <h1>You're just a little seed</h1>
 	  <h2>Develop innovative products by connecting, sharing, and collaborating</h2> 
+	 
     <!-- OUTTER WRAPPER -->
     <div id="slider-wrapper">
       <!-- SLIDE 1 -->
       <div id="slide1" class="slide">
-	<input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-success btn-large" id="NextButton" style="margin-top: 50px;" type="submit" value="Sprout!">
+	       <p style="font-size:16px;">The vision is to provide the most talented emerging artisan clothiers, textile engineers, and weavers and knitters the opportunity to work together to redefine bespoke clothing</p>
+	<input href="javascript:void(0)" onclick="NextSlide()" class="btn btn-success btn-large" id="NextButton" style="margin-top: 10px;" type="submit" value="Sprout!">
       </div>  <!-- /slide 1 -->
 
       <!-- SLIDE 2 -->
@@ -87,7 +68,9 @@
 
       <!-- SLIDE 3 -->
       <div id="slide3" class="slide">
-        <h4>Thank you.</h4>
+	      <h4>Thank you for your interest in this project.</h4>
+	      <p style="font-size:16px;">We're just a little seed too. We can't make an impact unless we grow stronger.</p><p style="font-size:16px;">You can help speed things along by sharing this link.</p> <br/>
+		<input href="javascript:void(0)" onclick="loadSocial()" class="btn btn-success btn-large" type="submit" value="Share!">
       </div>
     </div>
   </div>
