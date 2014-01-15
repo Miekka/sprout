@@ -77,7 +77,6 @@
 
       <!-- SLIDE 2 -->
       <div id="slide2" class="slide">
-	      <h3 style="margin-bottom: -10px;margin-top:-10px;">What's your angle?</h3>
         <div class="email_capture" style="margin-left:auto; margin-right:auto;">
           <div id="request-invite" class="form-inline">
             <%= render 'email_capture' %>

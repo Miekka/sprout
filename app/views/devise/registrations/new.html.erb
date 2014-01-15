@@ -21,27 +21,6 @@
   }
 
   function SetNavigationDisplay() {
-    // get current margin
-    var currentMargin = CurrentMargin();
-
-    // if current margin is at 0, then we are at the beginning, hide previous
-    if (currentMargin == 0) {
-      $("#PreviousButton").hide();
-    }
-    else {
-      $("#PreviousButton").hide();
-    }
-
-    // get wrapper width
-    var wrapperWidth = $("#slider-wrapper").width();
-
-    // turn current margin into postive number and calculate if we are at last slide, if so, hide next button
-    if ((currentMargin * -1) == (wrapperWidth - SlideWidth)) {
-      $("#NextButton").hide();
-    }
-    else {
-      $("#NextButton").show();
-    }
   }
 
   function NextSlide() {
