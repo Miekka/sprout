@@ -2,7 +2,7 @@
 <html>
 	<head>
 <link rel="icon" type="image/icon"
-     href="/assets/favicon.ico" />
+     href=".../assets/favicon.ico" />
 		
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, maximum-scale=0.75,; user-scalable=yes;">
     <title><%= content_for?(:title) ? yield(:title) : "Sprout" %></title>
