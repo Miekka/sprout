@@ -6,7 +6,7 @@
 
 We hope to be online as soon as possible, and will inform you as soon as we do.
 
-In the meantime, we are looking for ways to give you the most powerful Sprout experience. Please help us help you by taking <%= link_to 'this brief survey', confirmation_url('http://www.surveygizmo.com/s3/1510672/8282646ba80c') %> .
+In the meantime, we are looking for ways to give you the most powerful Sprout experience. Please help us help you by taking <a href="http://www.surveygizmo.com/s3/1510672/8282646ba80c"> a brief survey. </a>
 
 If you have any questions or comments, don't hesitate to contact us.
 
