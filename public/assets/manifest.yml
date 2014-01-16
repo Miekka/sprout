@@ -31,6 +31,8 @@ colorbg.png: colorbg-3fb3d9ba9f5572dae6fd8907554e7c80.png
 colorbg/index.png: colorbg-3fb3d9ba9f5572dae6fd8907554e7c80.png
 facebook.png: facebook-d81aa9250c0bbfecefcfccc583e8e733.png
 facebook/index.png: facebook-d81aa9250c0bbfecefcfccc583e8e733.png
+favicon.ico: favicon-e5f0545e345ef450e2fb95406bc8d051.ico
+favicon/index.ico: favicon-e5f0545e345ef450e2fb95406bc8d051.ico
 header.jpg: header-a171bad6757b63f66ba752660440991a.jpg
 header/index.jpg: header-a171bad6757b63f66ba752660440991a.jpg
 icons-16x16.png: icons-16x16-372bf1d163cafe79a7fbaaba57ee4bf8.png
