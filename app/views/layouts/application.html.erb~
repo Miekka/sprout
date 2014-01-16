@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <meta name="viewport" content="width=1170px; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+   <meta name="viewport" content="width=auto; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <title><%= content_for?(:title) ? yield(:title) : "Sprout" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -51,7 +51,8 @@ background-color:transparent; border:0px;">
       </nav>
           </footer>
         </div>
-      </div> <!--! end of .container -->
+</div> <!--! end of .container -->
+<%= debug(params) if Rails.env.development? %>
     </div> <!--! end of #main -->
   </body>
 </html>
