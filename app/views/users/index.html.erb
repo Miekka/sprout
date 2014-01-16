@@ -1,9 +1,10 @@
 <% content_for :head do %>
   <%= javascript_include_tag 'http://www.google.com/jsapi' %>
 <% end %>
-<h2>Users</h2>
+
 
 <div class="span9">
+	<h2>Users</h2>
   <p>
     Send Bulk Invitations:
     <%= link_to "10 &#183;".html_safe, bulk_invite_path(:quantity => '10') %>

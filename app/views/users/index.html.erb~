@@ -17,8 +17,8 @@
       <tr>
 	<th>Email</th>
 	<th>Discipline</th>
-	<th>Name</th>
 	<th>Weave or Knit</th>
+	<th>Name</th>
 	<th>School</th>
 	<th>Major</th>
 	<th>Graduated</th>
@@ -37,9 +37,9 @@
       <% @users.each do |user| %>
         <tr>
 		<td><%= link_to user.email, user %></td>
-		 <td><%= user.discipline %></td>
+		<td><%= user.discipline %></td>
+		<td><%= user.weaver_or_knitter %></td>
 	  <td><%= user.full_name %></td>
-	  <td><%= user.weaver_or_knitter %></td>
 	  <td><%= user.school %></td>
 	  <td><%= user.school_major %></td>
 	  <td><%= user.graduated %></td>
