@@ -1,4 +1,6 @@
-
+<% content_for :head do %>
+  <%= javascript_include_tag 'http://www.google.com/jsapi' %>
+<% end %>
 
 
 <div class="span9">
@@ -59,7 +61,4 @@
       <% end %>
     </tbody>
   </table>
-  <% content_for :head do %>
-  <%= javascript_include_tag 'http://www.google.com/jsapi' %>
-<% end %>
 </div>
