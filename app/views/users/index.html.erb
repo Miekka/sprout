@@ -16,7 +16,8 @@
   <table class="datatable table table-bordered table-condensed">
     <thead>
       <tr>
-	<th>Email</th>
+	      <th>Email</th>
+	      <th>Group</th>
 	<th>Discipline</th>
 	<th>Weave or Knit</th>
 	<th>Name</th>
@@ -38,6 +39,7 @@
       <% @users.each do |user| %>
         <tr>
 		<td><%= link_to user.email, user %></td>
+		<td><%= user.group_id %></td>
 		<td><%= user.discipline %></td>
 		<td><%= user.weaver_or_knitter %></td>
 	  <td><%= user.full_name %></td>

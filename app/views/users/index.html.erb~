@@ -16,7 +16,8 @@
   <table class="datatable table table-bordered table-condensed">
     <thead>
       <tr>
-	<th>Email</th>
+	      <th>Email</th>
+	      <th>Group</th>
 	<th>Discipline</th>
 	<th>Weave or Knit</th>
 	<th>Name</th>
@@ -26,11 +27,11 @@
 	<th>Website</th>
 	<th>Status</th>
 	<th></th>
-        <th>Requested</th>
+	<!-- <th>Requested</th>-->
         <th>Invitation</th>
-        <th>Joined</th>
+       <!-- <th>Joined</th>
         <th>Visits</th>
-	<th>Most Recent</th>
+	<th>Most Recent</th> -->
 	<th></th>
       </tr>
     </thead>
@@ -38,6 +39,7 @@
       <% @users.each do |user| %>
         <tr>
 		<td><%= link_to user.email, user %></td>
+		<td><%= user.group.id.1 %></td>
 		<td><%= user.discipline %></td>
 		<td><%= user.weaver_or_knitter %></td>
 	  <td><%= user.full_name %></td>
@@ -51,11 +53,11 @@
           <%= render user %>
         </td>
 	  
-          <td><%= user.created_at.to_date %></td>
+	<!-- <td><%= user.created_at.to_date %></td> -->
           <td><%= (user.confirmation_token.nil? ? (link_to "send invitation", invite_user_path(user)) : (link_to "resend", invite_user_path(user))) unless user.confirmed_at %></td>
-          <td><%= user.confirmed_at.to_date if user.confirmed_at %></td>
+         <!-- <td><%= user.confirmed_at.to_date if user.confirmed_at %></td>
           <td><%= user.sign_in_count if user.sign_in_count %></td>
-	  <td><%= user.last_sign_in_at.to_date if user.last_sign_in_at %></td>
+	  <td><%= user.last_sign_in_at.to_date if user.last_sign_in_at %></td>-->
 	   <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
         </tr>
       <% end %>
